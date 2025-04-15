@@ -2,18 +2,19 @@ import streamlit as st
 import os
 import tempfile
 
-from langchain.chat_models import ChatOpenAI
-from langchain.document_loaders import PyPDFLoader
+from langchain_community.chat_models import ChatOpenAI
+from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.vectorstores import FAISS
-from langchain.embeddings import OpenAIEmbeddings
+from langchain_community.document_loaders import PyPDFLoader
+from langchain_community.embeddings import OpenAIEmbeddings
 from langchain.chains.question_answering import load_qa_chain
 
 # ✅ Config
 st.set_page_config(page_title="AI Legal Team Agents", page_icon="⚖️", layout="wide")
 
 # ✅ Load API Key from secrets
-api_key = st.secrets.get("OPENAI_API_KEY")
+api_key = os.getenv("OPENAI_API_KEY")
+
 if api_key:
     os.environ["OPENAI_API_KEY"] = api_key
 else:
