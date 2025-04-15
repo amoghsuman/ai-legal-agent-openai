@@ -1,8 +1,7 @@
 openai==1.6.1
 streamlit==1.32.2
-agno==1.2.4
-duckduckgo-search==8.0.0
+langchain==0.1.14
+faiss-cpu==1.7.4
+tiktoken==0.5.1
 pypdf==3.16.4
-requests==2.31.0
-sqlalchemy==2.0.29
-chromadb==0.4.24
+duckduckgo-search==8.0.0
