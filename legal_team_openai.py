@@ -22,7 +22,7 @@ else:
     st.stop()
 
 # ✅ Model
-llm = ChatOpenAI(model_name="gpt-4", temperature=0)
+llm = ChatOpenAI(model_name="gpt-4", temperature=0, openai_api_key=api_key)
 
 # ✅ Session state
 if "vector_db" not in st.session_state:
