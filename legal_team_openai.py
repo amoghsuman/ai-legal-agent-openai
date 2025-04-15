@@ -1,3 +1,6 @@
+import openai
+st.sidebar.info(f"✅ OpenAI version: {openai.__version__}")
+
 import streamlit as st
 
 # ✅ Must be first Streamlit command
